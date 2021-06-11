@@ -302,7 +302,7 @@ function addArtist(array){
     bio: "Romy was nearly 30 when she decided to give web design a try. She quickly found that she loved it and spent much of her spare time practicing."});
     return array;
   }
-console.log(addArtist(artists));
+//console.log(addArtist(artists));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -312,11 +312,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  const newArr = [];
+  for(let i = 0; i < array.length; i++){
+    if (array[i].paintings > 100){
+      newArr.push(array[i].name);
+    }
+  }
+  return newArr;
 }
 
-
+console.log(lotsOfArt(artists))
 
 
 // 🎨🎨 STRETCH 🎨🎨//
