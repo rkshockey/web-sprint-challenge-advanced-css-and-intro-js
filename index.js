@@ -322,7 +322,7 @@ function lotsOfArt(array){
   return newArr;
 }
 
-console.log(lotsOfArt(artists))
+//console.log(lotsOfArt(artists))
 
 
 // 🎨🎨 STRETCH 🎨🎨//
@@ -347,21 +347,39 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
+function getHTML(array, key, key2){
+  const html = []
+  for (let i = 0; i < array.length; i++){
+    html.push(`<div id="artist">
+      <div class="image">
+        <img src="PAINTING URL"/>
+      </div>
+      <div class = "name">
+        <a href="WIKI URL">${array[i][key]}</a>
+      </div>
+      <div class = "bio">${array[i][key2]}</div>
+    </div>"`)
   }
+  return html
+}
+
+//console.log(getHTML(artists, "name", "bio"))
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){
+  const newArr = [];
+  while(array.length > 0){
+    let randomIndex = Math.floor(Math.random() * array.length);
+    newArr.push(array[randomIndex]);
+    array.splice(randomIndex, 1);
   }
+  return newArr;
+}
+
+console.log(randomize([1, 2, 3, 4, 5]))
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
