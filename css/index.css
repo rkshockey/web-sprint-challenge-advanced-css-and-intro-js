@@ -141,6 +141,20 @@ button:hover{
     nav{
         width: 50%
     }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .artist div{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 650px){
+    .artist div{
+        font-size: 1rem;
+    }
 }
 
 /*Mobile styling*/
@@ -164,9 +178,5 @@ button:hover{
 
     .artist img{
         width: 75%
-    }
-
-    .artist div{
-        font-size: 1rem;
     }
 }
